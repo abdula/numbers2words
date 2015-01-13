@@ -1,4 +1,5 @@
 /**
+/**
  * It converts a numeric value to words.
  * @class
  * @public

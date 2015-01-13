@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-1.12.0.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="http://code.jquery.com/qunit/qunit-1.12.0.js"></script>	
+		<script type="text/javascript" src="../src/polyfill/polyfill.js"></script>
+		<script type="text/javascript" src="../src/numbers2words.js"></script>
+		<script type="text/javascript" src="../src/locales/ru_RU.js"></script>
+		<script>
+			window.onload = function( ) {												
+				test( "toWords", function( ) {									
+					var translator = new T2W("RU_RU");
+					
+//					equal( translator.toWords(0), "ноль");
+//					equal( translator.toWords(1), "один");
+//					equal( translator.toWords(9), "девять");
+					
+					equal( translator.toWords(10), "десять");
+					equal( translator.toWords(11), "одиннадцать");
+					equal( translator.toWords(19), "девятнадцать");
+					equal( translator.toWords(20), "двадцать ");
+					equal( translator.toWords(21), "двадцать один");
+					equal( translator.toWords(99), "девяносто девять");
+					
+					equal( translator.toWords(100), "сто ");
+					equal( translator.toWords(101), "сто один");
+					equal( translator.toWords(109), "сто девять");
+					equal( translator.toWords(110), "сто десять");
+					equal( translator.toWords(111), "сто одиннадцать");
+					equal( translator.toWords(119), "сто девятнадцать");
+					equal( translator.toWords(199), "сто девяносто девять");
+					equal( translator.toWords(999), "девятьсот девяносто девять");
+
+					equal( translator.toWords(1000), "одна тысяча");
+					equal( translator.toWords(1001), "одна тысяча один");
+					equal( translator.toWords(1011), "одна тысяча одиннадцать");
+					equal( translator.toWords(1021), "одна тысяча двадцать один");
+					equal( translator.toWords(9000), "девять тысяч");
+					equal( translator.toWords(9001), "девять тысяч один");
+					equal( translator.toWords(9011), "девять тысяч одиннадцать");
+					equal( translator.toWords(9021), "девять тысяч двадцать один");
+					equal( translator.toWords(9999), "девять тысяч девятьсот девяносто девять");
+
+					equal( translator.toWords(11000), "одиннадцать тысяч");
+					equal( translator.toWords(11001), "одиннадцать тысяч один");
+					equal( translator.toWords(11011), "одиннадцать тысяч одиннадцать");
+					equal( translator.toWords(11021), "одиннадцать тысяч двадцать один");
+					equal( translator.toWords(99000), "девяносто девять тысяч");
+					equal( translator.toWords(99001), "девяносто девять тысяч один");
+					equal( translator.toWords(99011), "девяносто девять тысяч одиннадцать");
+					equal( translator.toWords(99021), "девяносто девять тысяч двадцать один");
+
+					equal( translator.toWords(1000000), "один миллион");
+					equal( translator.toWords(1000001), "один миллион один");
+					equal( translator.toWords(1000011), "один миллион одиннадцать");
+					equal( translator.toWords(1000021), "один миллион двадцать один");
+					equal( translator.toWords(1010000), "один миллион десять тысяч");
+					equal( translator.toWords(1010001), "один миллион десять тысяч один");
+					equal( translator.toWords(1021001), "один миллион двадцать одна тысяча один");
+					equal( translator.toWords(1110000), "один миллион сто десять тысяч");
+					equal( translator.toWords(11000000), "одиннадцать миллионов");
+					equal( translator.toWords(21000000), "двадцать один миллион");
+					equal( translator.toWords(999999999), "девятьсот девяносто девять миллионов девятьсот девяносто девять тысяч девятьсот девяносто девять");
+				});
+			};// onload
+		</script>
+	</head>
+	<body>
+		<h1 id="qunit-header">EN_US Locale</h1>
+		<h2 id="qunit-banner"></h2>
+		<div id="qunit-testrunner-toolbar"></div>
+		<h2 id="qunit-userAgent"></h2>
+		<ol id="qunit-tests"></ol>
+		<div id="qunit-fixture">
+			test markup, will be hidden
+		</div>
+	</body>
+</html>

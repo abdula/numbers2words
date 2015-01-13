@@ -115,7 +115,7 @@ T2W.CS_CZ.prototype._getTrio = function(numbers, index){
  * helper method to access the dictionary
  * @private
  * @param {number} number
- * @param {number} index 
+ * @param {number} index у
  * @return {string}
  */
 T2W.CS_CZ.prototype._getOnes = function( number, index ) {			
