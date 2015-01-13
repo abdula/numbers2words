@@ -55,6 +55,8 @@
                 equal( translator.toWords(11011), "одинадцять тисяч одинадцять");
                 equal( translator.toWords(11021), "одинадцять тисяч двадцять один");
                 equal( translator.toWords(11022), "одинадцять тисяч двадцять два");
+                equal( translator.toWords(21022), "двадцять одна тисяча двадцять два");
+                equal( translator.toWords(23022), "двадцять три тисячі двадцять два");
                 equal( translator.toWords(99000), "дев'яносто дев'ять тисяч");
                 equal( translator.toWords(99001), "дев'яносто дев'ять тисяч один");
                 equal( translator.toWords(99011), "дев'яносто дев'ять тисяч одинадцять");
@@ -71,9 +73,9 @@
                 equal( translator.toWords(1010001), "один мільйон десять тисяч один");
                 equal( translator.toWords(1110000), "один мільйон сто десять тисяч");
                 equal( translator.toWords(11000000), "одинадцять мільйонів");
-//                equal( translator.toWords(21000000), "двадцять один мільйон");
-//                equal( translator.toWords(22000000), "двадцять два мільйони");
-//                equal( translator.toWords(999999999), "дев'ятсот дев'яносто дев'ять мільйонів дев'ятсот дев'яносто дев'ять тисяч дев'ятсот дев'яносто дев'ять");
+                equal( translator.toWords(21000000), "двадцять один мільйон");
+                equal( translator.toWords(22000000), "двадцять два мільйони");
+                equal( translator.toWords(999999999), "дев'ятсот дев'яносто дев'ять мільйонів дев'ятсот дев'яносто дев'ять тисяч дев'ятсот дев'яносто дев'ять");
             });
         };// onload
     </script>
